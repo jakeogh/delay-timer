@@ -36,7 +36,7 @@ except ImportError:
 
 @click.command()
 @click.option('--start', type=float, default=10)
-@click.option('--mutliplier', type=float, default=0.3)
+@click.option('--multiplier', type=float, default=0.3)
 @click.option('--random', 'random_delay', is_flag=True)
 @click.option('--end', type=float, default=359)
 #@click.option('--verbose', is_flag=True)
