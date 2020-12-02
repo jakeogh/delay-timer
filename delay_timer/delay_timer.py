@@ -21,6 +21,16 @@
 #import random
 import time
 
+try:
+    from icecream import ic  # https://github.com/gruns/icecream
+except ImportError:
+    import sys
+
+    def eprint(*args, **kwargs):
+        if 'file' in kwargs.keys():
+            kwargs.pop('file')
+        print(*args, file=sys.stderr, **kwargs)
+
 
 class DelayTimer():
     def __init__(self, start, multiplier, end):
