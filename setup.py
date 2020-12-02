@@ -24,7 +24,7 @@ config = {
     "install_requires": dependencies,
     "entry_points": {
         "console_scripts": [
-            "delay_timer=delay_timer.delay_timer:cli",
+            "delay_timer_test=delay_timer.delay_timer_test:cli",
         ],
     },
 }

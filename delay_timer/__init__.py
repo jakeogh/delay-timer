@@ -1,2 +1,1 @@
-
-from ."delay_timer" import "delay_timer"
+from .delay_timer import DelayTimer
