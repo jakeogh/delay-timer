@@ -36,24 +36,22 @@ except ImportError:
 
 @click.command()
 @click.option('--start', type=float, default=10)
-@click.option('--mutiplier', type=float, default=0.3)
+@click.option('--mutliplier', type=float, default=0.3)
 @click.option('--random', 'random_delay', is_flag=True)
 @click.option('--end', type=float, default=359)
-@click.option('--verbose', is_flag=True)
-@click.option('--printn', is_flag=True)
+#@click.option('--verbose', is_flag=True)
+#@click.option('--printn', is_flag=True)
 def cli(start,
         multiplier,
         random_delay,
-        end,
-        verbose,
-        printn,):
+        end,):
 
-    null = not printn
-    end = '\n'
-    if null:
-        end = '\x00'
-    if sys.stdout.isatty():
-        end = '\n'
+    #null = not printn
+    #end = '\n'
+    #if null:
+    #    end = '\x00'
+    #if sys.stdout.isatty():
+    #    end = '\n'
 
     if random_delay:
         multiplier = multiplier * random.random()
