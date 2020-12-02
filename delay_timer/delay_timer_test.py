@@ -35,7 +35,6 @@ except ImportError:
 
 
 @click.command()
-@click.argument("paths", type=str, nargs=-1)
 @click.option('--start', type=float, default=10)
 @click.option('--mutiplier', type=float, default=0.3)
 @click.option('--random', 'random_delay', is_flag=True)
