@@ -33,7 +33,12 @@ except ImportError:
 
 
 class DelayTimer():
-    def __init__(self, start, multiplier, end):
+    def __init__(self,
+                 start,
+                 multiplier,
+                 end,
+                 verbose,):
+
         start = float(start)
         multiplier = float(multiplier)
         end = float(end)
@@ -52,7 +57,9 @@ class DelayTimer():
 
     def _sleep_next(self):
         if self.delay < self.end:
-            self.delay = max(self.delay + (self.delay * self.multiplier), self.end)
+            self.delay = min(self.delay + (self.delay * self.multiplier), self.end)
+            if self.verbose:
+                ic(self.delay)
 
     def sleep(self):
         self._sleep()
