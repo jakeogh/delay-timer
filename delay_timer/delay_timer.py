@@ -21,15 +21,7 @@
 #import random
 import time
 
-try:
-    from icecream import ic  # https://github.com/gruns/icecream
-except ImportError:
-    import sys
-
-    def eprint(*args, **kwargs):
-        if 'file' in kwargs.keys():
-            kwargs.pop('file')
-        print(*args, file=sys.stderr, **kwargs)
+from asserttool import ic
 
 
 class DelayTimer():
@@ -43,8 +35,8 @@ class DelayTimer():
         multiplier = float(multiplier)
         end = float(end)
         assert start >= 0
-        assert end > 0
-        assert multiplier > 0
+        assert end >= 0
+        assert multiplier >= 0
         assert start <= end
         delay = start
         self.delay = delay
