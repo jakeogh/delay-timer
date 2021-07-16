@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import sys
+
+from setuptools import find_packages
+from setuptools import setup
+
 import fastentrypoints
-from setuptools import find_packages, setup
+
 if not sys.version_info[0] == 3:
     sys.exit("Python 3 is required. Use: \'python3 setup.py install\'")
 
-dependencies = ["icecream", "click", "colorama"]
+dependencies = ["icecream", "click", "asserttool"]
 
 config = {
     "version": "0.1",
@@ -24,7 +28,7 @@ config = {
     "install_requires": dependencies,
     "entry_points": {
         "console_scripts": [
-            "delay-timer_test=delay-timer.delay-timer_test:cli",
+            "delay-timer-test=delay_timer.delay_timer_test:cli",
         ],
     },
 }
