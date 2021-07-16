@@ -25,9 +25,9 @@ from asserttool import ic
 
 class DelayTimer():
     def __init__(self,
-                 start: int,
+                 start: float,
                  multiplier: float,
-                 end: int,
+                 end: float,
                  verbose: bool = False,
                  debug: bool = False,
                  ):

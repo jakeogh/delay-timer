@@ -21,17 +21,10 @@
 import random
 
 import click
+from asserttool import eprint
+from asserttool import ic
 
 from delay_timer import DelayTimer
-
-try:
-    from icecream import ic  # https://github.com/gruns/icecream
-except ImportError:
-    import sys
-    def eprint(*args, **kwargs):
-        if 'file' in kwargs.keys():
-            kwargs.pop('file')
-        print(*args, file=sys.stderr, **kwargs)
 
 
 @click.command()
@@ -39,26 +32,21 @@ except ImportError:
 @click.option('--multiplier', type=float, default=0.3)
 @click.option('--random', 'random_delay', is_flag=True)
 @click.option('--end', type=float, default=359)
-#@click.option('--verbose', is_flag=True)
-#@click.option('--printn', is_flag=True)
-def cli(start,
-        multiplier,
-        random_delay,
-        end,):
-
-    #null = not printn
-    #end = '\n'
-    #if null:
-    #    end = '\x00'
-    #if sys.stdout.isatty():
-    #    end = '\n'
+@click.option('--verbose', is_flag=True)
+def cli(start: float,
+        multiplier: float,
+        random_delay: bool,
+        end: float,
+        verbose: bool,
+        ):
 
     if random_delay:
         multiplier = multiplier * random.random()
 
     delay_timer = DelayTimer(start=start,
                              multiplier=multiplier,
-                             end=end,)
+                             end=end,
+                             verbose=verbose,)
     ic(delay_timer)
     delay_timer.sleep()
 
