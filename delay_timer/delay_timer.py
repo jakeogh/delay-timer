@@ -25,10 +25,12 @@ from asserttool import ic
 
 class DelayTimer():
     def __init__(self,
-                 start,
-                 multiplier,
-                 end,
-                 verbose=False,):
+                 start: int,
+                 multiplier: float,
+                 end: int,
+                 verbose: bool = False,
+                 debug: bool = False,
+                 ):
 
         start = float(start)
         multiplier = float(multiplier)
