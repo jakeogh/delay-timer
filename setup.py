@@ -10,8 +10,8 @@ dependencies = ["icecream", "click", "colorama"]
 
 config = {
     "version": "0.1",
-    "name": "delay_timer",
-    "url": "https://github.com/jakeogh/delay_timer",
+    "name": "delay-timer",
+    "url": "https://github.com/jakeogh/delay-timer",
     "license": "ISC",
     "author": "Justin Keogh",
     "author_email": "github.com@v6y.net",
@@ -24,7 +24,7 @@ config = {
     "install_requires": dependencies,
     "entry_points": {
         "console_scripts": [
-            "delay_timer_test=delay_timer.delay_timer_test:cli",
+            "delay-timer_test=delay-timer.delay-timer_test:cli",
         ],
     },
 }
