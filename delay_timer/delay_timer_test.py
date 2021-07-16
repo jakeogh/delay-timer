@@ -21,7 +21,6 @@
 import random
 
 import click
-from asserttool import eprint
 from asserttool import ic
 
 from delay_timer import DelayTimer
