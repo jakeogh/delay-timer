@@ -18,7 +18,6 @@
 # pylint: disable=R0916  # Too many boolean expressions in if statement
 
 
-#import random
 import time
 
 from asserttool import ic
