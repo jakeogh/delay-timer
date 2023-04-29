@@ -23,6 +23,7 @@ from __future__ import annotations
 import time
 
 from asserttool import ic
+from asserttool import icp
 
 
 class DelayTimer:
@@ -31,9 +32,8 @@ class DelayTimer:
         start: float,
         multiplier: float,
         end: float,
-        verbose: bool | int | float,
+        verbose: bool | int | float = False,
     ):
-
         start = float(start)
         multiplier = float(multiplier)
         end = float(end)
@@ -48,7 +48,7 @@ class DelayTimer:
         self.verbose = verbose
 
     def _sleep(self):
-        ic(self.delay)
+        icp(self.delay)
         time.sleep(self.delay)
 
     def _sleep_next(self):
