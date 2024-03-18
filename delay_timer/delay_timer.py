@@ -39,7 +39,7 @@ class DelayTimer:
     def _sleep_next(self):
         if self.delay < self.end:
             self.delay = min(self.delay + (self.delay * self.multiplier), self.end)
-            icp(self.delay)
+            # icp(self.delay)
 
     def sleep(self):
         self._sleep()
