@@ -32,7 +32,7 @@ class DelayTimer:
         start: float,
         multiplier: float,
         end: float,
-        verbose: bool | int | float = False,
+        verbose: bool = False,
     ):
         start = float(start)
         multiplier = float(multiplier)
