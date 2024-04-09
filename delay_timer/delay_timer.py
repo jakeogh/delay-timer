@@ -17,7 +17,6 @@ class DelayTimer:
         start: float,
         multiplier: float,
         end: float,
-        verbose: bool = False,
     ):
         start = float(start)
         multiplier = float(multiplier)
@@ -30,10 +29,9 @@ class DelayTimer:
         self.delay = delay
         self.multiplier = multiplier
         self.end = end
-        self.verbose = verbose
 
     def _sleep(self):
-        icp(self.delay)
+        icp(self.delay, self.multiplier, self.end)
         time.sleep(self.delay)
 
     def _sleep_next(self):
