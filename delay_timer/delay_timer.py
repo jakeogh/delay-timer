@@ -24,7 +24,7 @@ class DelayTimer:
         assert start > 0
         assert end > start
         if multiplier == 0.0:
-            multiplier = 0.35
+            multiplier = 0.5
         assert multiplier > 0
         delay = start
         self.delay = delay
