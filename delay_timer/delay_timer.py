@@ -23,6 +23,8 @@ class DelayTimer:
         end = float(end)
         assert start > 0
         assert end > start
+        if multiplier == 0.0:
+            multiplier = 0.3
         assert multiplier > 0
         delay = start
         self.delay = delay
