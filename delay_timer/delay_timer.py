@@ -21,10 +21,9 @@ class DelayTimer:
         start = float(start)
         multiplier = float(multiplier)
         end = float(end)
-        assert start >= 0
-        assert end >= 0
-        assert multiplier >= 0
-        assert start <= end
+        assert start > 0
+        assert end > start
+        assert multiplier > 0
         delay = start
         self.delay = delay
         self.multiplier = multiplier
