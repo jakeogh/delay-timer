@@ -6,9 +6,15 @@
 from __future__ import annotations
 
 import time
+from random import randrange
 
 from asserttool import ic
 from asserttool import icp
+
+
+def random_delay_seconds(min: int, max: int):
+    _delay = randrange(min, max + 1)
+    time.sleep(_delay)
 
 
 class DelayTimer:
