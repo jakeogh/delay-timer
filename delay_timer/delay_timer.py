@@ -12,8 +12,8 @@ from asserttool import ic
 from asserttool import icp
 
 
-def random_delay_seconds(min: int, max: int):
-    _delay = randrange(min, max + 1)
+def random_delay_seconds(_min: int, _max: int):
+    _delay = randrange(_min, _max + 1)
     time.sleep(_delay)
 
 
@@ -21,15 +21,15 @@ class DelayTimer:
     def __init__(
         self,
         start: float,
-        multiplier: float,
         end: float,
+        multiplier: None | float = None,
     ):
         start = float(start)
         multiplier = float(multiplier)
         end = float(end)
         assert start > 0
         assert end > start
-        if multiplier == 0.0:
+        if multiplier is None:
             multiplier = 0.5
         assert multiplier > 0
         delay = start
