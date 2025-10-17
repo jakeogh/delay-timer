@@ -8,7 +8,6 @@ from __future__ import annotations
 import time
 from random import randrange
 
-from asserttool import ic
 from asserttool import icp
 
 
@@ -22,15 +21,13 @@ class DelayTimer:
         self,
         start: float,
         end: float,
-        multiplier: None | float = None,
+        multiplier: float = 0.5,
     ):
         start = float(start)
         multiplier = float(multiplier)
         end = float(end)
         assert start > 0
         assert end > start
-        if multiplier is None:
-            multiplier = 0.5
         assert multiplier > 0
         delay = start
         self.delay = delay
