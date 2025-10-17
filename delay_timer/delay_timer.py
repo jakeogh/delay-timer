@@ -21,14 +21,14 @@ class DelayTimer:
         self,
         start: float,
         end: float,
-        multiplier: float = 0.5,
+        multiplier: float = 1.0,
     ):
         start = float(start)
         multiplier = float(multiplier)
         end = float(end)
         assert start > 0
         assert end > start
-        assert multiplier > 0
+        # assert multiplier > 0
         delay = start
         self.delay = delay
         self.multiplier = multiplier
