@@ -21,7 +21,7 @@ class DelayTimer:
         self,
         start: float,
         end: float,
-        multiplier: float = 1.0,
+        multiplier: float = 1.5,
     ):
         start = float(start)
         multiplier = float(multiplier)
