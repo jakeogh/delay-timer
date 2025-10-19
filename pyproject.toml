@@ -6,8 +6,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "delay-timer"
-version = "0.1"
-description = "python class to use in delay loops"
+version = "0.0.1760904883"
+description = "Python class to use in delay loops"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
 ]
