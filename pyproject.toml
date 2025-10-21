@@ -1,12 +1,11 @@
 [build-system]
-requires = [
-    "setuptools>=61.0",
-]
-build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0", "tomlkit"]
+build-backend = "pep508_url_version_backend"
+backend-path = ["."]
 
 [project]
 name = "delay-timer"
-version = "0.0.1760910042"
+version = "0.0.1761031687"
 description = "Python class to use in delay loops"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
@@ -24,3 +23,8 @@ delay-timer-test = "delay_timer.delay_timer_test:cli"
 [tool.setuptools]
 include-package-data = true
 zip-safe = false
+
+[tool.pep508-url-version-backend]
+dependencies-indexed = []
+dependencies-git = []
+index-urls = ["jakeogh.github.io", "pip-index"]
