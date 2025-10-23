@@ -5,12 +5,11 @@ backend-path = ["."]
 
 [project]
 name = "delay-timer"
-version = "0.0.1761191821"
+version = "0.0.1761191926"
 description = "Python class to use in delay loops"
 authors = [
     { name = "Justin Keogh", email = "github.com@v6y.net" },
 ]
-
 dependencies = []
 license = "ISC"
 requires-python = ">=3.11"
