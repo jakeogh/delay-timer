@@ -4,7 +4,7 @@
 import random
 
 import click
-from asserttool import ic
+#from asserttool import ic
 
 from delay_timer import DelayTimer
 
@@ -30,7 +30,6 @@ def cli(
         start=start,
         multiplier=multiplier,
         end=end,
-        verbose=verbose,
     )
-    ic(delay_timer)
+    #ic(delay_timer)
     delay_timer.sleep()

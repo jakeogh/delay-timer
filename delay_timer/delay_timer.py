@@ -8,8 +8,6 @@ from __future__ import annotations
 import time
 from random import randrange
 
-from asserttool import icp
-
 
 def random_delay_seconds(min_seconds: int, max_seconds: int):
     """Sleep for a random number of seconds between min_seconds and max_seconds (inclusive)."""
@@ -46,7 +44,7 @@ class DelayTimer:
         self.end = end
 
     def _sleep(self):
-        icp(self.delay, self.multiplier, self.end)
+        # icp(self.delay, self.multiplier, self.end)
         time.sleep(self.delay)
 
     def _sleep_next(self):
